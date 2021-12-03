@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 37</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(skyblue, blue);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Quiz App</h1>
+    </header>
+    <h3>1. Which is the tallest building in the world?</h3>
+    <label for="">Burj Khalifa</label>
+    <input type="radio" name="building" id="" value="burj">
+    <label for="">Twin Tower</label>
+    <input type="radio" name="building" id="" value="twin"><br><br>
+    <label for="">Big Ben</label>
+    <input type="radio" name="building" id="" value="ben">
+    <label for="">Eiffel Tower</label>
+    <input type="radio" name="building" id="" value="eiffel">
+    <h3>2. Which is the fastest animal in the world?</h3>
+    <label for="">Tiger</label>
+    <input type="radio" name="fast" id="" value="tiger">
+    <label for="">Cheetah</label>
+    <input type="radio" name="fast" id="" value="cheetah"><br><br>
+    <label for="">Lion</label>
+    <input type="radio" name="fast" id="" value="lion">
+    <label for="">Tortoise</label>
+    <input type="radio" name="fast" id="" value="tortoise">
+    <h3>3. When did the first world war end?</h3>
+    <label for="">1918</label>
+    <input type="radio" name="war" id="" value="1918">
+    <label for="">1914</label>
+    <input type="radio" name="war" id="" value="1914"><br><br>
+    <label for="">1920</label>
+    <input type="radio" name="war" id="" value="1920">
+    <label for="">1921</label>
+    <input type="radio" name="war" id="" value="1921">
+    <h3>4. Which is the tallest statue in the world?</h3>
+    <label for="">Statue of Unity</label>
+    <input type="radio" name="statue" id="" value="unity">
+    <label for="">Statue of Liberty</label>
+    <input type="radio" name="statue" id="" value="liberty"><br><br>
+    <label for="">Statue of Buddha</label>
+    <input type="radio" name="statue" id="" value="buddha">
+    <label for="">Christ the Redeemer</label>
+    <input type="radio" name="statue" id="" value="christ">
+    <h3>5. Which is the tallest mountain in the world</h3>
+    <label for="">Himalayas</label>
+    <input type="radio" name="mountain" id="" value="himalayas">
+    <label for="">Kilimanjaro</label>
+    <input type="radio" name="mountain" id="" value="kilimanjaro"><br><br>
+    <label for="">K2</label>
+    <input type="radio" name="mountain" id="" value="k2">
+    <label for="">Mount Everest</label>
+    <input type="radio" name="mountain" id="" value="everest"><br><br>
+    <a href="session38.html"><button onclick="check()">Submit Answer</button></a>
+
+</body>
+<script>
+    var score = 0;
+    function check() {
+        var building = document.querySelector('input[name="building"]:checked').value;
+        if (building == "burj") {
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var fast = document.querySelector('input[name="fast"]:checked').value;
+        if (fast == "cheetah") {
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var war = document.querySelector('input[name="war"]:checked').value;
+        if (war == "1918") {
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var statue = document.querySelector('input[name="statue"]:checked').value;
+        if (statue == "unity") {
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var mountain = document.querySelector('input[name="mountain"]:checked').value;
+        if (mountain == "everest") {
+            score = score + 1;
+            localStorage.score = score;
+        }
+    }
+</script>
+
+</html>

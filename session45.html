@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 45</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(palegreen,green);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: green;
+            animation-name: intro-text;
+            animation-duration: 3s;
+        }
+        @keyframes intro-text {
+            0%{
+                color: transparent;
+            }
+            66%{
+                color: transparent;
+            }
+            100%{
+                color: green;
+            }
+        }
+        .intro{
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            animation-name: intro;
+            animation-duration: 3s;
+        }
+        @keyframes intro {
+            0%{
+                background-color: white;
+            }
+            66%{
+                background-color: white;
+            }
+            100%{
+                background-color: transparent;
+            }
+        }
+        img{
+            margin-top: 300px;
+            opacity: 0;
+            animation-name: intro-img;
+            animation-duration: 3s;
+        }
+        @keyframes intro-img {
+            0%{
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+            66%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+                transform: translateY(-100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+    <header>
+        <h1>Intro Page</h1>
+    </header>
+    <img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" alt="">
+    </div>
+    
+</body>
+
+</html>
